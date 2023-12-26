@@ -8,6 +8,10 @@
   --ff-general: "General", Sans;
 }
 
+::selection {
+  color: orangered;
+}
+
 @font-face {
   font-family: Nohemi;
   src: url(../fonts/nohemi-font-family-1703158914-0/Nohemi-SemiBold-BF6438cc588a48a.ttf);
@@ -115,6 +119,10 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 
+.banner-left {
+  display: block;
+}
+
 .banner-title h1 {
   color: var(--Black, #111018);
   font-family: "Nohemi";
@@ -162,8 +170,13 @@ button {
 }
 
 .banner-customer {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  /* display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 20px;
+  align-items: center;
+  justify-items: baseline; */
+  display: flex;
+  justify-content: start;
 }
 
 .customer-img img {
@@ -172,12 +185,20 @@ button {
   border-radius: 50%;
 }
 
-.customer-img:nth-child(1) {
+.customer-img {
+  display: flex;
+  width: 137px;
+}
+
+.customer-img > img:nth-child(1 of img) {
+  position: relative;
+}
+.customer-img > img:nth-child(2 of img) {
+  position: absolute;
+  left: 10%;
+  z-index: 1;
   
 }
-.customer-img:nth-child(2) {
-  
-}
-.customer-img:nth-child(3) {
-  
+.customer-img > img:nth-child(3 of img) {
+  z-index: 2;
 }
