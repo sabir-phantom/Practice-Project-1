@@ -9,7 +9,7 @@
 }
 
 ::selection {
-  background: orangered;
+  background: var(--primary-clr);
   color: var(--white-clr);
 }
 
@@ -39,6 +39,7 @@ p {
   max-width: 1200px;
   height: auto;
   margin: auto;
+  position: relative;
 }
 
 .nav-bar {
@@ -118,16 +119,18 @@ button {
 .banner-contents {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .banner-left {
   display: block;
+  width: 616px;
 }
 
-.banner-title h1 {
+.banner-title {
   color: var(--Black, #111018);
   font-family: "Nohemi";
-  font-size: 64px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 500;
   line-height: 78px; /* 121.875% */
@@ -177,7 +180,7 @@ button {
   align-items: center;
   justify-items: baseline; */
   display: flex;
-  justify-content: start;
+  height: 60px;
 }
 
 .customer-img img {
@@ -187,19 +190,66 @@ button {
 }
 
 .customer-img {
-  display: flex;
-  width: 137px;
+  display: block;
+  margin-right: 20px;
 }
 
 .customer-img > img:nth-child(1 of img) {
-  position: relative;
+  margin-left: 0;
 }
 .customer-img > img:nth-child(2 of img) {
-  position: absolute;
-  left: 10%;
+  margin-left: -25px;
   z-index: 1;
   
 }
 .customer-img > img:nth-child(3 of img) {
+  margin-left: -25px;
   z-index: 2;
+}
+
+.customer-count{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.customer-count h3{
+  color: var(--Black, #111018);
+  font-family: Nohemi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 108.333% */
+  letter-spacing: 0.3px;
+}
+
+/* banner image */
+.banner-right {
+  display: block;
+  position: relative;
+  margin-top: -15%;
+}
+.main-bnr-img {
+  display: block;
+}
+
+.banner-img::before {
+  content: "";
+  position: absolute;
+  width: 454px;
+  height: 506px;
+  border-radius: 20px;
+  background: #E8E6FF;
+  bottom: 0;
+  z-index: -1;
+}
+.banner-img::after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  border: 1.5px dashed var(--primary-clr);
+  width: 454px;
+  height: 506px;
+  transform: rotate(-11.853deg);
+  bottom: 0;
+  z-index: -11;
 }
