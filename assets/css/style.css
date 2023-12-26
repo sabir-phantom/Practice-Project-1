@@ -9,7 +9,8 @@
 }
 
 ::selection {
-  color: orangered;
+  background: orangered;
+  color: var(--white-clr);
 }
 
 @font-face {
