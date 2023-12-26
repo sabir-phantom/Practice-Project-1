@@ -288,6 +288,17 @@ button {
   margin-bottom: 100px;
 }
 
+.benefit-section::before {
+  content: "";
+  position: absolute;
+  background-image: url(/assets/icons/benefit-bg.svg);
+  background-repeat: no-repeat;
+  margin-left: 30px;
+  bottom: 0;
+  width: 200px;
+  height: 175px;
+}
+
 .section-titles {
   text-align: center;
   margin: auto;
@@ -330,7 +341,22 @@ padding-bottom: 12px;
   padding: 20px 16px;
   border-radius: 0 0 8px 8px;
   box-shadow: 0px 24px 24px 0px rgba(79, 78, 85, 0.10);  
+}
+
+.main-card:nth-child(1) {
   border-top: 3px solid var(--primary-clr);
+}
+
+.main-card:nth-child(2) {
+  border-top: 3px solid #FF0069;
+}
+
+.main-card:nth-child(3) {
+  border-top: 3px solid #FFA800;
+}
+
+.main-card:nth-child(4) {
+  border-top: 3px solid #00FF47;
 }
 
 .card-icon{
@@ -347,3 +373,4 @@ padding-bottom: 12px;
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.3px;
 }
+
