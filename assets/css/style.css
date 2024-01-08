@@ -445,6 +445,18 @@ letter-spacing: 0.3px;
   border: none;
   margin: 20px 0;
 }
+.course .course-btn:nth-child(1) {
+  background: var(--primary-clr);
+  
+}
+.course-cards .course-btn:nth-child(2) {
+  background:#FF0069;
+  
+}
+.course-btn:nth-child(3) {
+  background: #FFA800;
+  
+}
 
 .course-title {
   font-size: 20px;
@@ -457,6 +469,18 @@ letter-spacing: 0.3px;
 .course-desc {
   font-family: General Sans;
   font-size: 14px;
-  font-weight: 400;
-  
+  font-weight: 400; 
 }
+
+
+/* testimonial section */
+.testimonial-section .section-titles {
+  width: 623px; 
+  margin-bottom: 50px ;
+}
+.testimonial-section .section-titles .title{
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+ }
+
